@@ -1,0 +1,1318 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  
+  <title itemprop="name">待补 &lt; 简单DP &gt; 2019 GDUT Winter Training II | 瓜子壳专用垃圾桶</title>
+  
+    <link rel="shortcut icon" href="/images/favicon.ico">
+  
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+SerifMerriweather|Merriweather+Sans|Source+Code+Pro|Ubuntu:400,700|Noto+Serif+SC" media="all">
+  <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+  <link rel="stylesheet" id="saukra_css-css" href="/css/style.css" type="text/css" media="all">
+  <link rel="stylesheet" href="/css/lib.min.css" media="all">
+  <link rel="stylesheet" href="/css/font.css" media="all">
+  <link rel="stylesheet" href="/css/insight.css" media="all">
+  <link rel="stylesheet" href="/css/jquery.fancybox.min.css" media="all">
+  <link rel="stylesheet" href="/css/zoom.css" media="all">
+  <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<!--   <link rel="stylesheet" id="saukra_css-css" href="https://2heng.xin/wp-content/cache/autoptimize/css/autoptimize_ad42a61f4c7d4bdd9f91afcff6b5dda5.css
+" type="text/css" media="all"> -->
+  <script>
+  /*Initial Variables*/
+  var mashiro_option = new Object();
+  var mashiro_global = new Object();
+  mashiro_option.NProgressON = true;
+  /* 
+   * 邮箱信息之类的东西可以填在这里，这些js变量基本都作用于sakura-app.js
+   * 这样的设置仅是为了方便在基于PHP开发的主题中设置js变量，既然移植到了Node上，我想或许可以精简这一逻辑吧
+   */
+  mashiro_option.email_domain = "";
+  mashiro_option.email_name = "";
+  mashiro_option.cookie_version_control = "";
+  mashiro_option.qzone_autocomplete = false;
+  mashiro_option.site_name = "特別なゴミ箱WiLe";
+  mashiro_option.author_name = "WiLe";
+  mashiro_option.site_url = "wile.tech";
+  mashiro_option.v_appId = "PJqvrn7XuCeSFa0Qpu8mU6xu-gzGzoHsz";
+  mashiro_option.v_appKey = "GzRN0OkQrGu9wtjWl1LVBHBI";
+  mashiro_option.mathjax = "1";
+  mashiro_option.qq_api_url = "https://api.mashiro.top/qqinfo/"; 
+  mashiro_option.qq_avatar_api_url = "https://api.mashiro.top/qqinfo/";
+
+  // mashiro_option.jsdelivr_css_src = "https://cdn.jsdelivr.net/gh/moezx/cdn@3.4.5/css/lib.min.css";
+  // mashiro_option.float_player_on = true;
+
+  /*End of Initial Variables*/
+  </script>
+  <script type="text/javascript">
+  var bg = "https://cdn.jsdelivr.net/gh/WigginsLi/cdn@1.2/images/1.jpg".split(",");
+  var bgindex = Math.floor(Math.random()*bg.length);
+  if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
+    alert('朋友，IE浏览器未适配哦~');
+  }
+  </script>
+  <style type="text/css">
+  .hljs-ln{border-collapse:collapse}.hljs-ln td{padding:0}.hljs-ln-n:before{content:attr(data-line-number)}
+  </style>
+  <style type="text/css">.site-top .lower nav{display:block !important;}.author-profile i,.post-like a,.post-share .show-share,.sub-text,.we-info a,span.sitename,.post-more i:hover,#pagination a:hover,.post-content a:hover,.float-content i:hover{color:#FE9600}.feature i,.download,.navigator i:hover,.links ul li:before,.ar-time i,span.ar-circle,.object,.comment .comment-reply-link,.siren-checkbox-radio:checked + .siren-checkbox-radioInput:after{background:#FE9600}::-webkit-scrollbar-thumb{background:#FE9600}.download,.navigator i:hover,.link-title,.links ul li:hover,#pagination a:hover,.comment-respond input[type='submit']:hover{border-color:#FE9600}.entry-content a:hover,.site-info a:hover,.comment h4 a,#comments-navi a.prev,#comments-navi a.next,.comment h4 a:hover,.site-top ul li a:hover,.entry-title a:hover,#archives-temp h3,span.page-numbers.current,.sorry li a:hover,.site-title a:hover,i.iconfont.js-toggle-search.iconsearch:hover,.comment-respond input[type='submit']:hover{color:#FE9600}.comments .comments-main{display:block !important;}.comments .comments-hidden{display:none !important;}background-position:center center;background-attachment:inherit;}
+  </style>
+</head>
+</html>
+<body class="page-template page-template-user page-template-page-analytics page-template-userpage-analytics-php page page-id-1297 chinese-font serif isWebKit">
+  <div class="scrollbar" id="bar">
+  </div>
+  <a href="#" class="cd-top faa-float animated"></a>
+  <section id="main-container">
+    <div class="headertop ">
+  <div id="banner_wave_1"></div>
+  <div id="banner_wave_2"></div>
+  <figure id="centerbg" class="centerbg">
+    <div class="focusinfo no-select">
+      <div class="header-tou">
+        <a href="wile.tech">
+          <img src="https://cdn.jsdelivr.net/gh/WigginsLi/cdn@1.2/images/favicon.ico">
+        </a>
+      </div>
+      <div class="header-info">
+        <p>Tech Otaku Save the World.</p>
+        <div class="top-social_v2">
+          <li id="bg-pre">
+            <img class="flipx" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg">
+          </li>
+          
+            
+              
+                <li>
+                  <a href="http://github.com/WigginsLi" target="_blank" class="social-github" title="github">
+                    <img src="https://cdn.jsdelivr.net/gh/WigginsLi/cdn@1.2/img/social/github.png">
+                  </a>
+                </li>
+              
+            
+              
+                <li>
+                  <a href="https://www.zhihu.com/people/li-wei-jian-6-71/activities" target="_blank" class="social-github" title="zhihu">
+                    <img src="https://cdn.jsdelivr.net/gh/WigginsLi/cdn@1.2/img/social/zhihu.png">
+                  </a>
+                </li>
+              
+            
+              
+                <li>
+                  <a href="WigginsLee174@gmail.com" target="_blank" class="social-github" title="email">
+                    <img src="https://cdn.jsdelivr.net/gh/WigginsLi/cdn@1.2/img/social/email.svg">
+                  </a>
+                </li>
+              
+            
+          
+          <li id="bg-next">
+            <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg">
+          </li>
+        </div>
+      </div>
+    </div>
+  </figure>
+  <div id="video-container" style="">
+    <video style="object-fit: fill" id="bgvideo" class="video" video-name="" src="" width="auto" preload="auto">
+    </video>
+    <div id="video-btn" class="loadvideo videolive">
+    </div>
+    <div id="video-add">
+    </div>
+    <div class="video-stu">
+    </div>
+  </div>
+  <div class="headertop-down faa-float animated" onclick="headertop_down()">
+    <span>
+      <i class="fa fa-chevron-down" aria-hidden="true">
+      </i>
+    </span>
+  </div>
+</div>
+    <div id="page" class="site wrapper">
+      <header class="site-header no-select gizle sabit" role="banner">
+  <div class="site-top">
+    <div class="site-branding">
+      <span class="site-title">
+        <span class="logolink moe-mashiro">
+          <a href="/">
+            <span class="sakurasono">特別なゴミ箱</span>
+            <span class="shironeko">WiLe</span>
+          </a>
+        </span>
+      </span>
+    </div>
+    <div class="searchbox search-form-submit">
+      <i class="iconfont js-toggle-search iconsearch icon-search">
+      </i>
+    </div>
+    <div id="show-nav" class="showNav mobile-fit">
+      <div class="line line1">
+      </div>
+      <div class="line line2">
+      </div>
+      <div class="line line3">
+      </div>
+    </div>
+    <div class="lower-cantiner">
+      <div class="lower">
+        <nav class="mobile-fit-control hide">
+          <ul id="menu-new" class="menu">
+            
+              <li>
+                <a href="/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-fort-awesome faa-shake" aria-hidden="true"></i>
+                    首页
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+                    归档
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/categories/技术/">
+                          <i class="fa fa-code" aria-hidden="true"></i>
+                          技术
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/生活/">
+                          <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                          生活
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/资源/">
+                          <i class="fa fa-cloud-download" aria-hidden="true"></i>
+                          资源
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/随想/">
+                          <i class="fa fa-commenting-o" aria-hidden="true"></i>
+                          随想
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/转载/">
+                          <i class="fa fa-book" aria-hidden="true"></i>
+                          转载
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="javascript:;">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-list-ul faa-vertical" aria-hidden="true"></i>
+                    清单
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/tags/悦读/">
+                          <i class="fa fa-th-list faa-bounce" aria-hidden="true"></i>
+                          书单
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/bangumi/">
+                          <i class="fa fa-film faa-vertical" aria-hidden="true"></i>
+                          番组
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/music/">
+                          <i class="fa fa-headphones" aria-hidden="true"></i>
+                          歌单
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/tags/图集/">
+                          <i class="fa fa-photo" aria-hidden="true"></i>
+                          图集
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="/comment/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
+                    留言板
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/links/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-link faa-shake" aria-hidden="true"></i>
+                    友人帐
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-leaf faa-wrench" aria-hidden="true"></i>
+                    关于
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/about/">
+                          <i class="fa fa-meetup" aria-hidden="true"></i>
+                          我？
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/theme-sakura/">
+                          <i class="fa iconfont icon-sakura" aria-hidden="true"></i>
+                          主题
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="/atom.xml">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-rss faa-pulse" aria-hidden="true"></i>
+                    RSS
+                  </span>
+                </a>
+                
+              </li>
+            
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+<div class="pattern-center-blank"></div>
+
+<div id="content" class="site-content">
+  <div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
+      <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+        <div class="toc"></div>
+        <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
+        
+          <header class="entry-header">
+            <h1 class="entry-title">待补 < 简单DP > 2019 GDUT Winter Training II</h1>
+            <p class="entry-census">&nbsp;·&nbsp;2019-2-27&nbsp;·&nbsp;<span id="busuanzi_value_page_pv"></span>次阅读</p></p>
+
+            <hr>
+          </header>
+        
+        <div class="entry-content">
+          <blockquote>
+<p><a href="https://vjudge.net/contest/279505" target="_blank" rel="noopener">专题地址</a><br>现在还在简单DP的浅海扑腾扑腾<br>dalao们已经可以胡乱写出正确转移方程了<em>(:з」∠)</em></p>
+</blockquote>
+<a id="more"></a>
+<hr>
+<h1 id="背包"><a href="#背包" class="headerlink" title="背包"></a>背包</h1><blockquote>
+<p>背包问题具体的讲解真的讲不来，还是参考<a href="https://wenku.baidu.com/view/a169fa3ca32d7375a4178057.html" target="_blank" rel="noopener">权威教程–背包九讲</a>吧<em>(:з」∠)</em></p>
+</blockquote>
+<h2 id="01背包"><a href="#01背包" class="headerlink" title="01背包"></a>01背包</h2><pre><code>01背包==&gt;0/1==&gt;选/不选,考虑的问题就是如何选取物品时背包价值最大。  
+思路看过资料之后可能会一头雾水,看着代码模拟一下dp过程能加深理解  
+ヾ(◍°∇°◍)ﾉﾞ
+</code></pre><h3 id="A-Bone-Collector"><a href="#A-Bone-Collector" class="headerlink" title="A:Bone Collector"></a><a href="http://acm.hdu.edu.cn/showproblem.php?pid=2602" target="_blank" rel="noopener">A:Bone Collector</a></h3><blockquote>
+<p><strong>大意</strong>：给定一个有V容量的背包,给出N个物体的体积和价值,求能装出来<br>的最大价值</p>
+</blockquote>
+<pre><code>分析:01背包模板题,注意学习从二维数组到一维数组的空间优化
+</code></pre><p>代码如下:<br>二维数组版本:</p>
+<details><br>    <summary>View Code</summary><br><code>c++
+#include &lt;iostream&gt;
+#include &lt;algorithm&gt;
+#include &lt;cstdio&gt;
+#include &lt;string.h&gt;
+using namespace std;
+
+const int maxn = 1e3+5;
+int f[maxn][maxn],T,n,v,c[maxn],w[maxn];
+
+int main() {
+    scanf(&quot;%d&quot;,&amp;T);
+    while(T--) {
+        scanf(&quot;%d %d&quot;,&amp;n,&amp;v);
+        for(int i=1;i&lt;=n;i++) scanf(&quot;%d&quot;,&amp;c[i]);
+        for(int i=1;i&lt;=n;i++) scanf(&quot;%d&quot;,&amp;w[i]);
+
+        memset(f,0,sizeof(f));
+        for(int i=1;i&lt;=n;i++) {
+            for(int j=0;j&lt;=v;j++) {
+                if(j&lt;w[i]) f[i][j]=f[i-1][j];
+                else f[i][j]=max(f[i-1][j-w[i]]+c[i],f[i-1][j]);
+            }
+        }
+
+        cout&lt;&lt;f[n][v]&lt;&lt;endl;
+    }
+    return 0;
+}</code><br></details>
+
+<p>一维数组优化版本:</p>
+<details><br>    <summary>View Code</summary><br><code>c++
+#include &lt;iostream&gt;
+#include &lt;algorithm&gt;
+#include &lt;cstdio&gt;
+#include &lt;string.h&gt;
+using namespace std;
+
+const int maxn = 1e3+5;
+int f[maxn],T,n,v,c[maxn],w[maxn];
+
+int main() {
+    scanf(&quot;%d&quot;,&amp;T);
+    while(T--) {
+        scanf(&quot;%d %d&quot;,&amp;n,&amp;v);
+        for(int i=1;i&lt;=n;i++) scanf(&quot;%d&quot;,&amp;c[i]);
+        for(int i=1;i&lt;=n;i++) scanf(&quot;%d&quot;,&amp;w[i]);
+
+        memset(f,0,sizeof(f));
+        for(int i=1;i&lt;=n;i++) {
+            for(int j=v;j&gt;=w[i];j--) {
+                f[j]=max(f[j-w[i]]+c[i],f[j]);
+            }
+        }
+
+        cout&lt;&lt;f[v]&lt;&lt;endl;
+    }
+    return 0;
+}</code><br></details>
+
+<h3 id="B-CD"><a href="#B-CD" class="headerlink" title="B:CD"></a><a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&amp;Itemid=8&amp;page=show_problem&amp;problem=565" target="_blank" rel="noopener">B:CD</a></h3><blockquote>
+<p><strong>大意</strong>:给定M个CD,有各自的时长,求给定时限内能达到的最大CD播放时长<br>需要输出播放的每个CD.</p>
+</blockquote>
+<pre><code>分析:还是01背包裸题,只是价值和体积相同.难点是输出dp路径(1*)
+(1*):当我们选取当前CD,记[i][j]=1,最后得出最大价值  
+    时，往前减价值即可得出路径(表达不是很清楚,具体看代码)
+</code></pre><details><br>    <summary>View Code</summary><br><code>c++
+#include &lt;cstdio&gt;
+#include &lt;cmath&gt;
+#include &lt;string.h&gt;
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;algorithm&gt;
+using namespace std;
+
+const int N=10000+5;
+int f[25][N],n,v,a[N],g[25][N];
+
+int main() {
+    while(~scanf(&quot;%d %d&quot;,&amp;v,&amp;n)) {
+        for(int i=1;i&lt;=n;i++) scanf(&quot;%d&quot;,&amp;a[i]);
+
+        memset(f,0,sizeof(f));
+        memset(g,0,sizeof(g));
+        for(int i=1;i&lt;=n;i++) {
+            for(int j=v;j&gt;=0;j--) {
+                if(j&lt;a[i]) f[i][j]=f[i-1][j];
+                else{
+                    if(f[i-1][j]&lt;=f[i-1][j-a[i]]+a[i]) {
+                        f[i][j]=f[i-1][j-a[i]]+a[i];
+                        g[i][j]=1;
+                    }else{
+                        f[i][j]=f[i-1][j];
+                    }
+                }
+            }
+        }
+
+        vector&lt;int&gt; ve;
+        for(int i=n,j=v;i&gt;0;i--) {
+            if(g[i][j]) {
+                ve.push_back(a[i]);
+                j=j-a[i];
+            }
+        }
+        for(int i=ve.size()-1;i&gt;=0;i--) {
+            printf(&quot;%d &quot;,ve[i]);
+        }
+
+        printf(&quot;sum:%d\n&quot;,f[n][v]);
+    }
+    return 0;
+}</code><br></details>
+
+<hr>
+<h2 id="完全背包"><a href="#完全背包" class="headerlink" title="完全背包"></a>完全背包</h2><pre><code>完全背包求解的问题和01背包类似，但物品的选取变为无限个，即可以无限选取，  
+可以想到，每件物品最多能拿floor(V/ci)个，那么可以把这些分成一个个只能拿一次  
+的物品，这样就又转换为01背包问题，但是这样会很慢，需要优化(多重背包会讲到二进制优化)。  
+这里我们采用O(VN)的算法(详见背包九讲)
+</code></pre><h3 id="D-Piggy-Bank"><a href="#D-Piggy-Bank" class="headerlink" title="D:Piggy-Bank"></a><a href="http://acm.hdu.edu.cn/showproblem.php?pid=1114" target="_blank" rel="noopener">D:Piggy-Bank</a></h3><blockquote>
+<p>题意：给定一个背包，用给定的n个物品装满，可无限选用，使价值最低</p>
+</blockquote>
+<pre><code>分析:完全背包模板题，但是有“需要装满”的条件(1*)
+(1*):引用背包九讲的观点(做笔记做笔记)：
+</code></pre><pre><code>要求恰好装满背包，那么在初始化时除了 F[0] 为 0 ，其它
+F[1..V ] 均设为 −∞ ，这样就可以保证最终得到的 F[V ] 是一种恰好装满背包的最优解。
+如果并没有要求必须把背包装满，而是只希望价格尽量大，初始化时应该将 F[0..V ]
+全部设为 0 。
+</code></pre><p>代码如下：</p>
+<details><br>    <summary>View Code</summary><br><code>c++
+#include &lt;cstdio&gt;
+#include &lt;algorithm&gt;
+#include &lt;string.h&gt;
+using namespace std;
+
+const int maxn=500+10;
+int f[10000+5],T,S,F,v,n,p[maxn],w[maxn];
+
+int main() {
+    scanf(&quot;%d&quot;,&amp;T);
+    while(T--) {
+        scanf(&quot;%d %d %d&quot;,&amp;S,&amp;F,&amp;n);
+        for(int i=1;i&lt;=n;i++) scanf(&quot;%d %d&quot;,&amp;p[i],&amp;w[i]);
+        v=F-S;
+
+        for(int i=1;i&lt;=v;i++) f[i]=1e8;
+        f[0]=0;
+        for(int i=1;i&lt;=n;i++) {
+            for(int j=w[i];j&lt;=v;j++) {
+                f[j]=min(f[j],f[j-w[i]]+p[i]);
+            }
+        }
+
+        if(f[v]==1e8) {
+            printf(&quot;This is impossible.\n&quot;);
+        }else {
+            printf(&quot;The minimum amount of money in the piggy-bank is %d.\n&quot;,f[v]);
+        }
+    }
+}</code><br></details>
+
+<hr>
+<h2 id="多重背包"><a href="#多重背包" class="headerlink" title="多重背包"></a>多重背包</h2><pre><code>和完全背包不同的是，多重背包的每个物品有有限个的数目。当然，我们仍然可以转换成  
+01背包求解。但囿于复杂度过高，不得不进行优化。这里介绍二进制优化(见E题)。
+</code></pre><h3 id="E-Dividing"><a href="#E-Dividing" class="headerlink" title="E:Dividing"></a><a href="http://acm.hdu.edu.cn/showproblem.php?pid=1059" target="_blank" rel="noopener">E:Dividing</a></h3><blockquote>
+<p>题意：给出一堆面额分别为1-6的硬币，问是否可以分为等额的两堆</p>
+</blockquote>
+<pre><code>分析:是否能分为等额的两堆&lt;==&gt;能否装满总面额一半的面额
+==&gt;(必须装满的)多重背包问题。==&gt;分解成01背包复杂度O(V*sigema(C))  
+==&gt;如何降低复杂度(1*)
+(1*):假设一个物品只能取l件，将l分解成2^0+2^1+...+2^n+M,表示将l件物品分解  
+成系数为2^0,2^1,...,2^n,M的u件物品，比如说，13件价值为1的物品，分解成1,2,4,6  
+这4件物品，价格分别为1*1,2*1,4*1,6*1。
+为什么这个算法是正确的呢？我自己的理解是，首先我们知道每个数都可以由若干个  
+2的幂次数相加得到。然后,举刚刚的13件物品为例，分解之后，这4个价格已经可以装满，  
+(1,13)中，3=1+2,5=1+4,7=1+2+4,8=2+6,9=1+2+6,10=4+6,11=1+4+6,12=2+4+6.
+大家可以发现，每个价值都可以由这4个面额搭配得到，并且都只选用一次。算法正确性显然。
+(我知道不严谨，别打我我是弟弟) 
+</code></pre><p>具体看代码主体:</p>
+<details><br>    <summary>View Code</summary><br><code>c++
+#include &lt;iostream&gt;
+#include &lt;cstdio&gt;
+#include &lt;algorithm&gt;
+#include &lt;string.h&gt;
+#include &lt;cmath&gt;
+using namespace std;
+
+const int N=5e5;
+int c[7],f[N],t=0;
+
+int main() {
+    while(1) {
+        int sum=0;
+        for(int i=1;i&lt;=6;i++) {
+            scanf(&quot;%d&quot;,&amp;c[i]);
+            sum+=i*c[i];
+        }
+        if(sum==0) break;
+        if(sum%2!=0) {
+            printf(&quot;Collection #%d:\n&quot;,++t);
+            printf(&quot;Can&#39;t be divided.\n\n&quot;);
+            continue;
+        }
+        sum/=2;
+
+        for(int i=1;i&lt;=sum;i++) f[i]=-1e9;
+        f[0]=0;
+        for(int i=1;i&lt;=6;i++) {
+            int l=min(c[i],sum/i);
+            for(int k=1;l&gt;0;k*=2) {
+                if(k&gt;l) k=l;
+                l-=k;
+                for(int j=sum;j&gt;=i*k;j--) {
+                    f[j]=max(f[j],f[j-i*k]+i*k);
+                }
+            }
+        }
+        printf(&quot;Collection #%d:\n&quot;,++t);
+        if(f[sum]&lt;0) {
+            printf(&quot;Can&#39;t be divided.\n\n&quot;);
+        }else{
+            printf(&quot;Can be divided.\n\n&quot;);
+        }
+    }
+    return 0;
+}</code><br></details>
+
+
+<h3 id="F-Coins"><a href="#F-Coins" class="headerlink" title="F:Coins"></a><a href="http://poj.org/problem?id=1742" target="_blank" rel="noopener">F:Coins</a></h3><blockquote>
+<p>大意：给出硬币面额及每种硬币的个数，求从1到m能凑出面额的个数。</p>
+</blockquote>
+<pre><code>分析:仅需要知道是否能得到该面额==&gt;多重背包的可行性问题
+如果我们仍选用上一道题的解法，即便采用二进制优化，O(V*sigema(log(ci))*M)  
+也承担不起，但是我们可以想到这道题不需要知道装满该容量的最大价值(实际上上一  
+题也不需要，只是为了学习二进制优化而故意使用的)，这里面或许可以优化。  
+==&gt;设 F[i,j] 表示“用了前 i 种物品填满容量为 j 的背包后，最多还剩  
+下几个第 i 种物品可用”，如果 F[i,j] = −1 则说明这种状态不可行，若可行应满足  
+0 ≤ F[i,j] ≤ M i
+</code></pre><p>具体看代码 (=´ω｀=)：<br>(第二层的两个循环可以合并，减少一些常数复杂度，不然编译器选的不好就会T（逃~)</p>
+<details><br>    <summary>View Code</summary><br><code>c++
+#include &lt;iostream&gt;
+#include &lt;algorithm&gt;
+#include &lt;cstdio&gt;
+#include &lt;string.h&gt;
+using namespace std;
+
+const int N=1e5+5;
+int f[N],n,m,cut[105],w[105];
+
+int main() {
+    while(~scanf(&quot;%d %d&quot;,&amp;n,&amp;m)&amp;&amp;n&amp;&amp;m) {
+        for(int i=1;i&lt;=n;i++) {scanf(&quot;%d&quot;,&amp;w[i]);}
+        for(int i=1;i&lt;=n;i++) {scanf(&quot;%d&quot;,&amp;cut[i]);}
+
+        for(int j=1;j&lt;=m;j++) {f[j]=-1;}
+        f[0]=0;
+        for(int i=1;i&lt;=n;i++) {
+            for(int j=0;j&lt;=m;j++) {
+                if(f[j]&gt;=0) {
+                    f[j]=cut[i];
+                }else{
+                    f[j]=-1;
+                }
+            }
+            for(int j=0;j&lt;=m-w[i];j++) {
+                if(f[j]&gt;0) {
+                    f[j+w[i]]=max(f[j+w[i]],f[j]-1);
+                }
+            }
+        }
+        int ans=0;
+        for(int j=1;j&lt;=m;j++) {
+            if(f[j]&gt;=0) ans++;
+        }
+        printf(&quot;%d\n&quot;,ans);
+    }
+    return 0;
+}</code><br></details>
+
+<hr>
+<h1 id="数塔问题"><a href="#数塔问题" class="headerlink" title="数塔问题"></a>数塔问题</h1><pre><code>dp中比较简单的类型,最简单的即金字塔问题,从顶端到底部的最短距离
+初学者容易误认为可以用贪心解决(对就是我)o(╥﹏╥)o
+</code></pre><h2 id="C-Unidirectional-TSP"><a href="#C-Unidirectional-TSP" class="headerlink" title="C:Unidirectional TSP"></a><a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&amp;Itemid=8&amp;page=show_problem&amp;problem=52" target="_blank" rel="noopener">C:Unidirectional TSP</a></h2><blockquote>
+<p><strong>大意</strong>：一个人从左边移动到右边,可以走三个方向(可实现第一排移动到最下面<br>一排的穿越)</p>
+</blockquote>
+<pre><code>分析:数塔问题的进阶,瞎搞搞可能也能过(划掉)，因为要输出字典序最小,关键是如何巧妙  
+解决可以穿越的问题(1*)。
+1*:对于当前节点，把可以移动到该节点的三个坐标的列数记录下来，进行一个排序,这样  
+可以把上下两排的判断一般化，不需要特判，缩减代码量，也不容易写错
+</code></pre><p>具体代码：</p>
+<details><br>    <summary>View Code</summary><br><code>c++
+#include &lt;cstdio&gt;
+#include &lt;iostream&gt;
+#include &lt;algorithm&gt;
+#include &lt;string.h&gt;
+using namespace std;
+
+const int N=105;
+const int INF=1e9;
+int m,n,d[15][N],nxt[15][N],a[15][N];
+
+int main() {
+    while(~scanf(&quot;%d %d&quot;,&amp;m,&amp;n)) {
+        for(int i=0;i&lt;m;i++) {
+            for(int j=0;j&lt;n;j++) {
+                scanf(&quot;%d&quot;,&amp;a[i][j]);
+            }
+        }
+        int ans=INF,first=0;
+        for(int j=n-1;j&gt;=0;j--) {
+            for(int i=0;i&lt;m;i++) {
+                if(j==n-1) d[i][j]=a[i][j];
+                else {
+                    int rows[3]={i,i-1,i+1};
+                    if(i==0) rows[1]=m-1;
+                    if(i==m-1) rows[2]=0;
+                    sort(rows,rows+3);
+                    d[i][j]=INF;
+                    for(int k=0;k&lt;3;k++) {
+                        int v=d[rows[k]][j+1]+a[i][j];
+                        if(v&lt;d[i][j]) {d[i][j]=v;nxt[i][j]=rows[k];}
+                    }
+                }
+                if(j==0&amp;&amp;d[i][j]&lt;ans){ans=d[i][j];first=i;}
+            }
+        }
+
+        printf(&quot;%d&quot;,first+1);
+        for(int i=nxt[first][0],j=1;j&lt;n;i=nxt[i][j],j++)
+            printf(&quot; %d&quot;,i+1);
+        printf(&quot;\n%d\n&quot;,ans);
+    }
+    return 0;
+}</code><br></details>
+
+<hr>
+<h1 id="LCS-最长公共子序列-amp-amp-LIS-最长单调子序列"><a href="#LCS-最长公共子序列-amp-amp-LIS-最长单调子序列" class="headerlink" title="LCS(最长公共子序列) &amp;&amp; LIS(最长单调子序列)"></a>LCS(最长公共子序列) &amp;&amp; LIS(最长单调子序列)</h1><pre><code>比较简单的DP类型,具体的讲解可以参考
+</code></pre><p><a href="https://www.cnblogs.com/wuyuegb2312/p/3281264.html#q3" target="_blank" rel="noopener">这里(常见的动态规划问题分析与求解)</a></p>
+<h2 id="G-Common-Subsequence"><a href="#G-Common-Subsequence" class="headerlink" title="G:Common Subsequence"></a><a href="http://acm.hdu.edu.cn/showproblem.php?pid=1159" target="_blank" rel="noopener">G:Common Subsequence</a></h2><blockquote>
+<p>大意：求两字符串的最长公共子序列</p>
+</blockquote>
+<pre><code>分析：裸的LCS模板，直接放代码啦(&gt;ω･* )ﾉ
+</code></pre><p>代码如下：</p>
+<details><br>    <summary>View Code</summary><br><code>c++
+#include &lt;iostream&gt;
+#include &lt;string.h&gt;
+#include &lt;algorithm&gt;
+#include &lt;cmath&gt;
+using namespace std;
+
+int f[1005][1005];
+char c1[1005],c2[1005];
+
+int main() {
+    while(~scanf(&quot;%s %s&quot;,c1,c2)) {
+        int len1=strlen(c1),len2=strlen(c2);
+        memset(f,0,sizeof(f));
+        for(int i=1;i&lt;=len1;i++) {
+            for(int j=1;j&lt;=len2;j++) {
+                if(c1[i-1]==c2[j-1]) {
+                    f[i][j]=f[i-1][j-1]+1;
+                }else {
+                    f[i][j]=max(f[i-1][j],f[i][j-1]);
+                }
+            }
+        }
+        printf(&quot;%d\n&quot;,f[len1][len2]);
+    }
+    return 0;
+}</code><br></details>
+
+<h2 id="H-最少拦截系统"><a href="#H-最少拦截系统" class="headerlink" title="H:最少拦截系统"></a><a href="http://acm.hdu.edu.cn/showproblem.php?pid=1257" target="_blank" rel="noopener">H:最少拦截系统</a></h2><blockquote>
+<p>大意:导弹拦截系统可递减高度地拦截导弹，求拦截全部导弹最少需要多少套系统。</p>
+</blockquote>
+<pre><code>分析：正向用LIS我们可以知道系统可以拦截的最多的导弹是多少，反过来便可以  
+求得最少需要多少套系统(此处需要Dilworth定理，不会，先挖个坑)
+</code></pre><p>直接上代码：</p>
+<details><br>    <summary>View Code</summary><br><code>c++
+#include &lt;cstdio&gt;
+#include &lt;string.h&gt;
+#include &lt;iostream&gt;
+#include &lt;algorithm&gt;
+using namespace std;
+
+const int maxn = 1e5+10;
+int n,f[maxn],num[maxn],d[maxn];
+
+int main() {
+    //freopen(&quot;1020.txt&quot;,&quot;r&quot;,stdin);
+    while(~scanf(&quot;%d&quot;,&amp;n)){
+        int t=0;
+        for(int i=1;i&lt;=n;i++) {
+            scanf(&quot;%d&quot;,&amp;num[i]);
+            f[i]=1;
+            //cout&lt;&lt;num[i]&lt;&lt;endl;
+            for(int j=t;j&gt;=1;j--) {
+                //cout&lt;&lt;num[j]&lt;&lt;&quot; &quot;;
+                if(num[i]&gt;num[d[j]]){
+                    f[i]=max(f[i],f[d[j]]+1);
+                }
+            }
+            t=max(t,f[i]);
+            d[f[i]]=i;
+        }
+        cout&lt;&lt;t&lt;&lt;endl;
+    }
+    return 0;
+}</code><br></details>
+
+<h2 id="I-Super-Jumping-Jumping-Jumping"><a href="#I-Super-Jumping-Jumping-Jumping" class="headerlink" title="I:Super Jumping! Jumping! Jumping!"></a><a href="http://acm.hdu.edu.cn/showproblem.php?pid=1087" target="_blank" rel="noopener">I:Super Jumping! Jumping! Jumping!</a></h2><blockquote>
+<p>大意：从起点往终点跳跃，只能到比当前格子严格小的格子，不能回头，分数为跳过的格子价值总和。</p>
+</blockquote>
+<pre><code>分析：LIS裸题，只不过f[i]从表示长度改为表示sum
+</code></pre><p>代码来咯||ヽ(<em>￣▽￣</em>)ノミ|Ю</p>
+<details><br>    <summary>View Code</summary><br><code>c++
+#include &lt;cstdio&gt;
+#include &lt;algorithm&gt;
+#include &lt;string.h&gt;
+#include &lt;iostream&gt;
+using namespace std;
+
+const int maxn = 1000+10;
+int f[maxn],n,a[maxn];
+
+int main() {
+    while(~scanf(&quot;%d&quot;,&amp;n)&amp;&amp;n) {
+        for(int i=1;i&lt;=n;i++) scanf(&quot;%d&quot;,&amp;a[i]);
+
+        memset(f,0,sizeof(f));
+        int ans=-1;
+        for(int i=1;i&lt;=n;i++) {
+            f[i]=a[i];
+            for(int j=1;j&lt;i;j++) {
+                if(a[j]&lt;a[i]) {
+                    f[i]=max(f[i],f[j]+a[i]);
+                }
+            }
+            ans=max(ans,f[i]);
+        }
+        printf(&quot;%d\n&quot;,ans);
+    }
+    return 0;
+}</code><br></details>
+
+<hr>
+<h1 id="稍微复杂"><a href="#稍微复杂" class="headerlink" title="稍微复杂"></a>稍微复杂</h1><h2 id="M-Hills"><a href="#M-Hills" class="headerlink" title="M:Hills"></a><a href="http://codeforces.com/problemset/problem/1013/E" target="_blank" rel="noopener">M:Hills</a></h2><blockquote>
+<p>大意：</p>
+</blockquote>
+<pre><code>分析：
+</code></pre><details><br>    <summary>View Code</summary><br><code>c++
+#include &lt;cstdio&gt;
+#include &lt;cstring&gt;
+#include &lt;algorithm&gt;
+using namespace std;
+#define N 5005
+typedef long long ll;
+int n,a[N];
+ll f[N][N&gt;&gt;1][2];
+int main() {
+    scanf(&quot;%d&quot;,&amp;n);
+    int i,j;
+    for(i=1;i&lt;=n;i++) scanf(&quot;%d&quot;,&amp;a[i]);
+    int lim=(n+1)&gt;&gt;1;
+    memset(f,0x3f,sizeof(f));
+    f[0][0][0]=0;
+    f[1][0][0]=f[1][1][1]=0;
+    for(i=2;i&lt;=n;i++) {
+        f[i][0][0]=0;
+        for(j=1;j&lt;=i;j++) {
+            f[i][j][1]=min(f[i-1][j-1][0]+max(0,a[i-1]-a[i]+1),
+                            f[i-2][j-1][1]+max(0,a[i-1]-min(a[i-2],a[i])+1));
+            f[i][j][0]=min(f[i-1][j][0],f[i-1][j][1]+max(0,a[i]-a[i-1]+1));
+        }
+    }
+    for(i=1;i&lt;=lim;i++) printf(&quot;%lld &quot;,min(f[n][i][0],f[n][i][1]));
+    return 0;
+}</code><br></details>
+
+<h2 id="N-Jury-Compromise"><a href="#N-Jury-Compromise" class="headerlink" title="N:Jury Compromise"></a><a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&amp;Itemid=8&amp;page=show_problem&amp;problem=259" target="_blank" rel="noopener">N:Jury Compromise</a></h2><blockquote>
+<p>大意：</p>
+</blockquote>
+<pre><code>分析：
+</code></pre><hr>
+<p><img src="/images/10.jpg" alt="img"></p>
+
+        </div>
+        <!-- .entry-content -->
+        <div class="single-reward">
+          <div class="reward-open">赏<div class="reward-main">
+              <ul class="reward-row">
+                <li class="alipay-code"><img src="https://cdn.jsdelivr.net/gh/WigginsLi/cdn@1.2null"></li>
+                <li class="wechat-code"><img src="https://cdn.jsdelivr.net/gh/WigginsLi/cdn@1.2null"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
+        <footer class="post-footer">
+          <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
+          <div class="post-tags">
+          </div>
+          <div class="post-share">
+            <div class="social-share sharehidden share-component"></div>
+            <i class="iconfont show-share icon-forward"></i>
+          </div>
+        </footer><!-- .entry-footer -->
+      </article>
+      <!-- #post-## -->
+      <div class="toc" style="background: none;"></div>
+      <section class="post-squares nextprev">
+        
+          
+            <div class="post-nepre half previous">
+          
+            <a href="/2019/03/01/pytroch-install/" rel="prev">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/WigginsLi/cdn@1.2/img/loader/orange.progress-bar-stripe-loader.svg" data-src="" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="">
+              </div>
+              <span class="label">
+              Previous Post</span>
+              <div class="info">
+                <h3>
+                记pytroch安装及入门</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+        
+          
+            <div class="post-nepre half next">
+          
+            <a href="/2019/02/27/dfs-bfs-training/" rel="next">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/WigginsLi/cdn@1.2/img/loader/orange.progress-bar-stripe-loader.svg" data-src="" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="">
+              </div>
+              <span class="label">
+              Next Post</span>
+              <div class="info">
+                <h3>
+                待补 &lt; DFS+BFS &gt; 2019 GDUT Winter Training I</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+      </section>
+      
+<div id="vcomments"></div>
+<script>
+  window.onload = function(){
+      var valine = new Valine();
+      valine.init({
+        el: '#vcomments',
+        appId: "PJqvrn7XuCeSFa0Qpu8mU6xu-gzGzoHsz",
+        appKey: "GzRN0OkQrGu9wtjWl1LVBHBI",
+        path: window.location.pathname,
+        placeholder: "你是我一生只会遇见一次的惊喜 ..."
+      })
+  }
+</script>
+
+      <section class="author-profile">
+        <div class="info" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+          <a href="" class="profile gravatar"><img src="" itemprop="image" alt="" height="70" width="70"></a>
+          <div class="meta">
+            <span class="title">Author</span>
+            <h3 itemprop="name">
+            <a href="" itemprop="url" rel="author"></a>
+            </h3>
+          </div>
+        </div>
+        <hr>
+        <p><i class="iconfont icon-write"></i></p>
+      </section>
+    </main><!-- #main -->
+  </div><!-- #primary -->
+</div>
+
+
+
+    </div>    
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="请输入关键词..."/>
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            // PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+    <!-- <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 $ \cal WiLe $<br>
+      powered_by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer> -->
+<footer id="colophon" class="site-footer" role="contentinfo">
+  <div class="site-info">
+    <div class="footertext">
+      <div class="img-preload">
+        <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/wordpress-rotating-ball-o.svg">
+        <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/disqus-preloader.svg">
+      </div>
+      <p style="color: #666666;">&copy 2018</p>
+    </div>
+    <div class="footer-device">
+    <p style="font-family: 'Ubuntu', sans-serif;">
+        <span style="color: #b9b9b9;">Theme <a href="https://github.com/honjun/hexo-theme-sakura" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Sakura</a> <i class="iconfont icon-sakura rotating" style="color: #ffc0cb;display:inline-block"></i> by <a href="https://2heng.xin/" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Mashiro</a>&<a href="https://www.hojun.cn/" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Hojun</a>, Powered by Hexo, Hosted by Coding Pages</a>
+        </span>
+      </p>
+    </div>
+  </div><!-- .site-info -->
+</footer>
+
+
+
+<!-- <script src="/js/tocbot.js"></script> -->
+<script type="text/javascript" src="/js/lib.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script type="text/javascript" src="/js/InsightSearch.js"></script>
+<script type="text/javascript" src="/js/jquery.fancybox.min.js"></script>
+<script type="text/javascript" src="/js/zoom.min.js"></script>
+<script type="text/javascript" src="/js/sakura-app.js"></script>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine@1.3.4/dist/Valine.min.js'></script>
+<!-- 不蒜子 网页计数器 -->
+<script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script> -->
+<script type="text/javascript">
+/* <![CDATA[ */
+if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+  var Poi = {"pjax":"1","movies":{"url": "https://cdn.jsdelivr.net/gh/honjun/hojun@1.2","name":"Unbroken.mp4","live":"close"},"windowheight":"fixed","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+} else {
+  var Poi = {"pjax":"1","movies":{"url": "https://cdn.jsdelivr.net/gh/honjun/hojun@1.2","name":"Unbroken.mp4","live":"open"},"windowheight":"auto","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+}
+/* ]]> */
+
+</script>
+<script>
+$(document).ready(function() {
+  if ($(".toc").length > 0 && document.body.clientWidth > 1200) {
+    if ($(".pattern-center").length > 0) { //有图的情况
+      tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -400,
+          scrollSmoothOffset: -85
+      });
+    } else {
+      tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -85,
+          scrollSmoothOffset: -85
+      });
+    }
+    var offsetTop = $('.toc').offset().top - 95;
+    window.onscroll = function() {
+      var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+      if (scrollTop >= offsetTop) {
+        $('.toc').addClass('toc-fixed');
+      } else {
+        $('.toc').removeClass('toc-fixed');
+      }
+    }
+  }
+});
+</script>
+
+    <div class="openNav no-select" style="height: 50px;">
+      <div class="iconflat no-select" style="width: 50px; height: 50px;">
+        <div class="icon"></div>
+      </div>
+      <div class="site-branding search-form-submit">
+        <i class="iconfont js-toggle-search iconsearch icon-search"></i>
+      </div>
+    </div>
+  </section>
+  <div id="mo-nav" class="">
+  <div class="m-avatar">
+    <img src="https://cdn.jsdelivr.net/gh/WigginsLi/cdn@1.2/images/favicon.ico">
+  </div>
+  <p style="text-align: center; color: #333; font-weight: 900; font-family: 'Ubuntu', sans-serif; letter-spacing: 1.5px">特別なゴミ箱WiLe</p>
+  <p style="text-align: center; word-spacing: 20px;">
+    
+      
+        <a href="http://github.com/WigginsLi" class="fa fa-github" target="_blank" style="color: #333; margin-left:20px"></a>
+      
+    
+  </p>
+  <ul id="menu-new-1" class="menu">
+    
+      <li>
+        <a href="/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-fort-awesome faa-shake" aria-hidden="true"></i>
+            首页
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/archives">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+            归档
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/categories/技术/">
+                  <i class="fa fa-code" aria-hidden="true"></i>
+                  技术
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/生活/">
+                  <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                  生活
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/资源/">
+                  <i class="fa fa-cloud-download" aria-hidden="true"></i>
+                  资源
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/随想/">
+                  <i class="fa fa-commenting-o" aria-hidden="true"></i>
+                  随想
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/转载/">
+                  <i class="fa fa-book" aria-hidden="true"></i>
+                  转载
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li>
+        <a href="javascript:;">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-list-ul faa-vertical" aria-hidden="true"></i>
+            清单
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/tags/悦读/">
+                  <i class="fa fa-th-list faa-bounce" aria-hidden="true"></i>
+                  书单
+                </a>
+              </li>
+            
+              <li>
+                <a href="/bangumi/">
+                  <i class="fa fa-film faa-vertical" aria-hidden="true"></i>
+                  番组
+                </a>
+              </li>
+            
+              <li>
+                <a href="/music/">
+                  <i class="fa fa-headphones" aria-hidden="true"></i>
+                  歌单
+                </a>
+              </li>
+            
+              <li>
+                <a href="/tags/图集/">
+                  <i class="fa fa-photo" aria-hidden="true"></i>
+                  图集
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li>
+        <a href="/comment/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
+            留言板
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/links/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-link faa-shake" aria-hidden="true"></i>
+            友人帐
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-leaf faa-wrench" aria-hidden="true"></i>
+            关于
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/about/">
+                  <i class="fa fa-meetup" aria-hidden="true"></i>
+                  我？
+                </a>
+              </li>
+            
+              <li>
+                <a href="/theme-sakura/">
+                  <i class="fa iconfont icon-sakura" aria-hidden="true"></i>
+                  主题
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li>
+        <a href="/atom.xml">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-rss faa-pulse" aria-hidden="true"></i>
+            RSS
+          </span>
+        </a>
+        
+      </li>
+    
+  </ul>
+  <p style="text-align: center; font-size: 13px; color: #b9b9b9;">&copy 2019 hexo-sakura</p>
+</div>
+<button onclick="topFunction()" class="mobile-cd-top" id="moblieGoTop" title="Go to top" style="display: none;"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.css">
+<script src="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js"></script>
+<style>
+  .aplayer .aplayer-lrc {
+    height: 35px;
+  }
+  .aplayer .aplayer-lrc p{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px !important;
+  }
+  .aplayer .aplayer-lrc p.aplayer-lrc-current{
+    color: #FF1493;
+  }
+  .aplayer.aplayer-narrow .aplayer-body{
+    left: -66px !important;
+  }
+  .aplayer.aplayer-fixed .aplayer-lrc {
+    display: none;
+  }
+  .aplayer .aplayer-lrc.aplayer-lrc-hide {
+      display:none !important;
+  }
+  .aplayer.aplayer-fixed .lrc-show {
+    display: block;
+    background: rgba(255, 255, 255, 0.8);
+  }
+</style>
+<div class="aplayer"
+
+    data-id="2660651585"
+
+    data-server="netease"
+
+    data-type="playlist"
+
+    data-fixed="true"
+
+    data-autoplay="false"
+
+    data-loop="all"
+
+    data-order="random"
+
+    data-preload="auto"
+
+    data-volume="0.7"
+
+    data-mutex="true"
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/meting@1.2/dist/Meting.min.js"></script>
+<script>
+  $(function(){
+    $('body').on('click', '.aplayer', function(){
+      if($('.aplayer-button').hasClass('aplayer-play')) {
+        $('.aplayer-lrc').removeClass('lrc-show');
+      } else {
+        $('.aplayer-lrc').addClass('lrc-show');
+      }
+    })
+  });
+</script>
+</body>
+</html>

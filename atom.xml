@@ -1,0 +1,522 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>瓜子壳专用垃圾桶</title>
+  
+  <subtitle>Tech Otaku Save the World</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://WigginsLi.github.io/"/>
+  <updated>2019-08-09T11:06:59.587Z</updated>
+  <id>http://WigginsLi.github.io/</id>
+  
+  <author>
+    <name>$ \cal WiLe $</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>__int128类型小记</title>
+    <link href="http://WigginsLi.github.io/2019/07/19/int128/"/>
+    <id>http://WigginsLi.github.io/2019/07/19/int128/</id>
+    <published>2019-07-19T06:31:10.467Z</published>
+    <updated>2019-08-09T11:06:59.587Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;范围是  $[- 2^{127} , 2^{127}-1]$ &lt;/p&gt;
+&lt;p&gt;基本用法与基本数据类型类似，但不能用$cin,cout$读入输出&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这里记下==输入输出“外挂”==：&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Experience" scheme="http://WigginsLi.github.io/categories/Experience/"/>
+    
+    
+      <category term="数据类型" scheme="http://WigginsLi.github.io/tags/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>如何更稳定地科学上网-记vultr被墙后的v2ray+WebSocket+TLS部署过程</title>
+    <link href="http://WigginsLi.github.io/2019/06/16/v2ray-deploy/"/>
+    <id>http://WigginsLi.github.io/2019/06/16/v2ray-deploy/</id>
+    <published>2019-06-16T14:02:20.000Z</published>
+    <updated>2019-08-09T11:07:06.917Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;del&gt;$Github Page$ 姑且算是国外的网站吧，在上面记一下科学上网应该没问题吧（狗头保命&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&amp;lt;本文仅为技术交流，请勿转载&amp;gt;&lt;/strong&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="科学上网" scheme="http://WigginsLi.github.io/categories/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/"/>
+    
+    
+      <category term="v2ray" scheme="http://WigginsLi.github.io/tags/v2ray/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>p3080 [USACO13MAR]牛跑The Cow Run [区间DP]</title>
+    <link href="http://WigginsLi.github.io/2019/05/30/p3080/"/>
+    <id>http://WigginsLi.github.io/2019/05/30/p3080/</id>
+    <published>2019-05-29T21:07:47.000Z</published>
+    <updated>2019-05-29T14:17:34.535Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;$\implies$ &lt;a href=&quot;https://www.luogu.org/problemnew/show/P3080&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;传送门&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;题目大意:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;给定一条坐标轴上$n$个点相对于原点的位置(正负均有)&lt;/li&gt;
+&lt;li&gt;从原点出发去占领这些点,被占领前每个点单位时间消耗一个单位代价&lt;/li&gt;
+&lt;li&gt;每单位时间可以移动一个单位长度,问最少花费多少代价&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="动态规划" scheme="http://WigginsLi.github.io/categories/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+    
+      <category term="dp" scheme="http://WigginsLi.github.io/tags/dp/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>cf-1114D Flood Fill [区间DP]</title>
+    <link href="http://WigginsLi.github.io/2019/05/30/cf-1114D/"/>
+    <id>http://WigginsLi.github.io/2019/05/30/cf-1114D/</id>
+    <published>2019-05-29T18:58:26.000Z</published>
+    <updated>2019-05-29T14:17:11.031Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;$\implies$ &lt;a href=&quot;https://www.luogu.org/problemnew/show/CF1114D&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;传送门&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;题目大意:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;给定$n$个方块有相应的颜色$c_i$,定义相邻的方块颜色相同则可以称为一个联通颜色块.&lt;/li&gt;
+&lt;li&gt;现在让你初始选定一个方块$p$,每次可以将该方块所在的联通颜色块换成一个颜色,求最少的操作次数使得$n$个方块全部为一种颜色&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="动态规划" scheme="http://WigginsLi.github.io/categories/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+    
+      <category term="区间dp" scheme="http://WigginsLi.github.io/tags/%E5%8C%BA%E9%97%B4dp/"/>
+    
+      <category term="dp" scheme="http://WigginsLi.github.io/tags/dp/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>洛谷p1119-灾后重建 [floyd]</title>
+    <link href="http://WigginsLi.github.io/2019/05/11/p1119/"/>
+    <id>http://WigginsLi.github.io/2019/05/11/p1119/</id>
+    <published>2019-05-11T11:15:57.000Z</published>
+    <updated>2019-05-28T14:38:40.710Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;$\implies$ &lt;a href=&quot;https://www.luogu.org/problemnew/show/P1119&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;传送门&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;题目大意: 给出图中$x_i$节点被加进图里的时间$t_i$;&lt;br&gt;&lt;br&gt;多个询问$Q$,求$t_j$时间,$x_j,y_j$的最短距离
+    
+    </summary>
+    
+      <category term="动态规划" scheme="http://WigginsLi.github.io/categories/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+      <category term="思维" scheme="http://WigginsLi.github.io/categories/%E6%80%9D%E7%BB%B4/"/>
+    
+    
+      <category term="floyd" scheme="http://WigginsLi.github.io/tags/floyd/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ACM协会+青创课第二节KMP讲解资料</title>
+    <link href="http://WigginsLi.github.io/2019/05/06/kmp-teaching/"/>
+    <id>http://WigginsLi.github.io/2019/05/06/kmp-teaching/</id>
+    <published>2019-05-06T01:00:51.000Z</published>
+    <updated>2019-05-27T12:07:16.072Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;一篇讲的很好的博客, $ \implies $  &lt;a href=&quot;https://www.cnblogs.com/yjiyjige/p/3263858.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;这里&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;PPT下载 $\implies$ &lt;a href=&quot;https://pan.baidu.com/s/13O9WiAkaQYDrKE1UMJAS4w&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;百度网盘&lt;/a&gt;  提取码: pqs9&lt;br&gt;或者复制这一段:  &lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;链接: https://pan.baidu.com/s/13O9WiAkaQYDrKE1UMJAS4w 提取码: pqs9 复制这段内容后打开百度网盘手机App，操作更方便哦
+&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
+    
+    </summary>
+    
+      <category term="字符串" scheme="http://WigginsLi.github.io/categories/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
+    
+    
+      <category term="KMP" scheme="http://WigginsLi.github.io/tags/KMP/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【04.11训练赛记录】</title>
+    <link href="http://WigginsLi.github.io/2019/04/13/19-4-11-Training/"/>
+    <id>http://WigginsLi.github.io/2019/04/13/19-4-11-Training/</id>
+    <published>2019-04-12T19:57:36.000Z</published>
+    <updated>2019-08-09T11:06:43.570Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;出题数垫底祭QAQ&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;$\implies$&lt;a href=&quot;https://codeforces.com/group/NVaJtLaLjS/contest/242532/attachments/download/6308/20172018-acmicpc-pacific-northwest-regional-contest-div-1-en.pdf&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;题目文档PDF(似乎只有同一个group才能打开)&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;打不开的小伙伴请自行搜索&lt;br&gt;&lt;strong&gt;(20172018-acmicpc-pacific-northwest-regional-contest-div-1)&lt;/strong&gt;&lt;br&gt;(づ￣3￣)づ&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="Training" scheme="http://WigginsLi.github.io/categories/Training/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>CF-1141E-Superhero Battle【数学+细节】</title>
+    <link href="http://WigginsLi.github.io/2019/03/21/cf-1141E/"/>
+    <id>http://WigginsLi.github.io/2019/03/21/cf-1141E/</id>
+    <published>2019-03-20T23:43:15.000Z</published>
+    <updated>2019-03-20T15:55:18.113Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;$\implies$&lt;a href=&quot;http://codeforces.com/problemset/problem/1141/E&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;传送门&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;乍看下是水题，结果wa得措不及防&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="数论" scheme="http://WigginsLi.github.io/categories/%E6%95%B0%E8%AE%BA/"/>
+    
+    
+      <category term="数学" scheme="http://WigginsLi.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CF-1141F2-Same Sum Blocks (Hard)【数据结构+贪心】</title>
+    <link href="http://WigginsLi.github.io/2019/03/21/cf-1141F2/"/>
+    <id>http://WigginsLi.github.io/2019/03/21/cf-1141F2/</id>
+    <published>2019-03-20T23:42:56.000Z</published>
+    <updated>2019-03-20T16:15:35.746Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;$\implies$&lt;a href=&quot;http://codeforces.com/contest/1141/problem/F2&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;传送门&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;学习对$map$的灵活应用&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="数据结构" scheme="http://WigginsLi.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+      <category term="贪心" scheme="http://WigginsLi.github.io/categories/%E8%B4%AA%E5%BF%83/"/>
+    
+    
+      <category term="map" scheme="http://WigginsLi.github.io/tags/map/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CF-414B-Mashmokh and ACM【DP】</title>
+    <link href="http://WigginsLi.github.io/2019/03/21/cf414B/"/>
+    <id>http://WigginsLi.github.io/2019/03/21/cf414B/</id>
+    <published>2019-03-20T22:39:44.000Z</published>
+    <updated>2019-03-20T15:17:04.355Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;$\implies$ &lt;a href=&quot;https://codeforces.com/problemset/problem/414/B&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;传送门&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;简单dp，学一下套路&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="动态规划" scheme="http://WigginsLi.github.io/categories/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+    
+      <category term="dp" scheme="http://WigginsLi.github.io/tags/dp/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hdu-6470-Count【矩阵快速幂+二项式定理】</title>
+    <link href="http://WigginsLi.github.io/2019/03/19/hdu-6470/"/>
+    <id>http://WigginsLi.github.io/2019/03/19/hdu-6470/</id>
+    <published>2019-03-18T23:26:52.000Z</published>
+    <updated>2019-05-05T16:58:33.874Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;$\implies$&lt;a href=&quot;http://acm.hdu.edu.cn/showproblem.php?pid=6470&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;传送门&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;加深了对矩阵快速幂的理解&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="组合数学" scheme="http://WigginsLi.github.io/categories/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/"/>
+    
+    
+      <category term="矩阵快速幂" scheme="http://WigginsLi.github.io/tags/%E7%9F%A9%E9%98%B5%E5%BF%AB%E9%80%9F%E5%B9%82/"/>
+    
+      <category term="二项式定理" scheme="http://WigginsLi.github.io/tags/%E4%BA%8C%E9%A1%B9%E5%BC%8F%E5%AE%9A%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hdu-6467简单数学题【数论/组合数学】</title>
+    <link href="http://WigginsLi.github.io/2019/03/19/hdu-6467/"/>
+    <id>http://WigginsLi.github.io/2019/03/19/hdu-6467/</id>
+    <published>2019-03-18T21:56:02.000Z</published>
+    <updated>2019-03-18T15:17:06.077Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;$\implies$&lt;a href=&quot;http://acm.hdu.edu.cn/showproblem.php?pid=6467&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;HDU传送门&lt;/a&gt;  &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;推式子题，赛场上没推出来，学习学习&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="数论" scheme="http://WigginsLi.github.io/categories/%E6%95%B0%E8%AE%BA/"/>
+    
+      <category term="组合数学" scheme="http://WigginsLi.github.io/categories/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/"/>
+    
+    
+      <category term="推式子" scheme="http://WigginsLi.github.io/tags/%E6%8E%A8%E5%BC%8F%E5%AD%90/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>欧拉定理初识与应用</title>
+    <link href="http://WigginsLi.github.io/2019/03/18/eulerdlksm/"/>
+    <id>http://WigginsLi.github.io/2019/03/18/eulerdlksm/</id>
+    <published>2019-03-18T12:58:28.000Z</published>
+    <updated>2019-05-27T12:52:16.813Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;上次打gzu校赛时碰到了一道大整数幂取模的题&lt;br&gt;赛后得知是欧拉定理，当场懵逼，赶紧补一下知识面&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="数论" scheme="http://WigginsLi.github.io/categories/%E6%95%B0%E8%AE%BA/"/>
+    
+    
+      <category term="欧拉" scheme="http://WigginsLi.github.io/tags/%E6%AC%A7%E6%8B%89/"/>
+    
+      <category term="快速幂" scheme="http://WigginsLi.github.io/tags/%E5%BF%AB%E9%80%9F%E5%B9%82/"/>
+    
+      <category term="费马小定理" scheme="http://WigginsLi.github.io/tags/%E8%B4%B9%E9%A9%AC%E5%B0%8F%E5%AE%9A%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>USACO-Team Tic Tac Toe【暴力】</title>
+    <link href="http://WigginsLi.github.io/2019/03/16/rating-3-C/"/>
+    <id>http://WigginsLi.github.io/2019/03/16/rating-3-C/</id>
+    <published>2019-03-16T11:45:25.000Z</published>
+    <updated>2019-03-16T12:00:48.341Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;$\implies$&lt;a href=&quot;http://codeforces.com/group/NVaJtLaLjS/contest/238202/problem/C&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;contest传送门&lt;/a&gt;&lt;br&gt;$\implies$&lt;a href=&quot;http://www.usaco.org/index.php?page=viewproblem2&amp;amp;cpid=831&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;USACO传送门&lt;/a&gt;  &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;考察细节&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="Training" scheme="http://WigginsLi.github.io/categories/Training/"/>
+    
+      <category term="暴力" scheme="http://WigginsLi.github.io/categories/%E6%9A%B4%E5%8A%9B/"/>
+    
+    
+      <category term="暴力" scheme="http://WigginsLi.github.io/tags/%E6%9A%B4%E5%8A%9B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>USACO18OPEN-Out of Sorts G【思维】</title>
+    <link href="http://WigginsLi.github.io/2019/03/16/rating-3-F/"/>
+    <id>http://WigginsLi.github.io/2019/03/16/rating-3-F/</id>
+    <published>2019-03-16T11:05:58.000Z</published>
+    <updated>2019-03-16T03:37:06.822Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;$\implies$&lt;a href=&quot;http://codeforces.com/group/NVaJtLaLjS/contest/238202/problem/F&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;contest传送门&lt;/a&gt;&lt;br&gt;$\implies$&lt;a href=&quot;https://www.luogu.org/problemnew/show/P4375&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;洛谷传送门&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;out of sort系列第二题&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="Training" scheme="http://WigginsLi.github.io/categories/Training/"/>
+    
+      <category term="思维" scheme="http://WigginsLi.github.io/categories/%E6%80%9D%E7%BB%B4/"/>
+    
+    
+      <category term="思维" scheme="http://WigginsLi.github.io/tags/%E6%80%9D%E7%BB%B4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>USACO18OPEN-Out of Sorts S【思维】</title>
+    <link href="http://WigginsLi.github.io/2019/03/16/rating-3-A/"/>
+    <id>http://WigginsLi.github.io/2019/03/16/rating-3-A/</id>
+    <published>2019-03-16T10:49:17.000Z</published>
+    <updated>2019-03-16T03:13:21.153Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;$\implies$&lt;a href=&quot;http://codeforces.com/group/NVaJtLaLjS/contest/238202/problem/A&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;contest传送门&lt;/a&gt;&lt;br&gt;$\implies$&lt;a href=&quot;https://www.luogu.org/problemnew/show/P4378&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;洛谷传送门&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;out of sort系列第一题&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="Training" scheme="http://WigginsLi.github.io/categories/Training/"/>
+    
+      <category term="思维" scheme="http://WigginsLi.github.io/categories/%E6%80%9D%E7%BB%B4/"/>
+    
+    
+      <category term="思维" scheme="http://WigginsLi.github.io/tags/%E6%80%9D%E7%BB%B4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>USACO18FEB-Snow Boots S【线性dp】</title>
+    <link href="http://WigginsLi.github.io/2019/03/16/rating-2-G/"/>
+    <id>http://WigginsLi.github.io/2019/03/16/rating-2-G/</id>
+    <published>2019-03-16T09:43:22.000Z</published>
+    <updated>2019-03-16T03:41:20.534Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;$\implies$&lt;a href=&quot;http://codeforces.com/group/NVaJtLaLjS/contest/238204/problem/G&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;contest传送门&lt;/a&gt;&lt;br&gt;$\implies$&lt;a href=&quot;https://www.luogu.org/problemnew/show/P4265&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;洛谷传送门&lt;/a&gt;  &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;又是一道比较简单的dp，但是赛场上还是没出_(:з」∠)&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="Training" scheme="http://WigginsLi.github.io/categories/Training/"/>
+    
+      <category term="动态规划" scheme="http://WigginsLi.github.io/categories/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+    
+      <category term="dp" scheme="http://WigginsLi.github.io/tags/dp/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>USACO-Teleportation【模拟】</title>
+    <link href="http://WigginsLi.github.io/2019/03/16/rating-2-F/"/>
+    <id>http://WigginsLi.github.io/2019/03/16/rating-2-F/</id>
+    <published>2019-03-16T01:39:34.000Z</published>
+    <updated>2019-03-15T17:51:09.989Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;$\implies$ &lt;a href=&quot;http://codeforces.com/group/NVaJtLaLjS/contest/238204/problem/F&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;contest传送门&lt;/a&gt;&lt;br&gt;$\implies$ &lt;a href=&quot;http://www.usaco.org/index.php?page=viewproblem2&amp;amp;cpid=807&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;USACO传送门&lt;/a&gt;  &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;水题一道，仅做记录&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="Training" scheme="http://WigginsLi.github.io/categories/Training/"/>
+    
+      <category term="模拟" scheme="http://WigginsLi.github.io/categories/%E6%A8%A1%E6%8B%9F/"/>
+    
+    
+      <category term="模拟" scheme="http://WigginsLi.github.io/tags/%E6%A8%A1%E6%8B%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>USACO18FEB-Rest Stops【贪心】</title>
+    <link href="http://WigginsLi.github.io/2019/03/16/rating-2-C/"/>
+    <id>http://WigginsLi.github.io/2019/03/16/rating-2-C/</id>
+    <published>2019-03-16T00:28:36.000Z</published>
+    <updated>2019-03-15T17:25:25.389Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;$\implies$&lt;a href=&quot;http://codeforces.com/group/NVaJtLaLjS/contest/238204/problem/C&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;contest传送门&lt;/a&gt;&lt;br&gt;$\implies$&lt;a href=&quot;https://www.luogu.org/problemnew/show/P4266&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;洛谷传送门&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;场上没做出来的贪心题，关键是没读懂题意or2&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="Training" scheme="http://WigginsLi.github.io/categories/Training/"/>
+    
+      <category term="贪心" scheme="http://WigginsLi.github.io/categories/%E8%B4%AA%E5%BF%83/"/>
+    
+    
+      <category term="贪心" scheme="http://WigginsLi.github.io/tags/%E8%B4%AA%E5%BF%83/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>USACO-Hoofball【dfs/dp】</title>
+    <link href="http://WigginsLi.github.io/2019/03/16/rating-2-B/"/>
+    <id>http://WigginsLi.github.io/2019/03/16/rating-2-B/</id>
+    <published>2019-03-15T23:11:44.000Z</published>
+    <updated>2019-03-15T16:20:17.413Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;$\implies$&lt;a href=&quot;http://codeforces.com/group/NVaJtLaLjS/contest/238204/problem/B&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;contest传送门&lt;/a&gt;  &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;嘛还是找不到其他题库链接这次排位赛的题就全部贴题面了&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;本来dfs可以做，不过赛场上没有调出来&lt;br&gt;大概是求出有几个闭环，再加以计算即可&lt;/li&gt;
+&lt;li&gt;赛后看了下题解，发现有$dp$的做法，学习一波&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="Training" scheme="http://WigginsLi.github.io/categories/Training/"/>
+    
+      <category term="动态规划" scheme="http://WigginsLi.github.io/categories/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+      <category term="搜索" scheme="http://WigginsLi.github.io/categories/%E6%90%9C%E7%B4%A2/"/>
+    
+    
+      <category term="dp" scheme="http://WigginsLi.github.io/tags/dp/"/>
+    
+  </entry>
+  
+</feed>
