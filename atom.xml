@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://WigginsLi.github.io/"/>
-  <updated>2019-09-09T10:34:35.364Z</updated>
+  <updated>2020-01-12T15:02:05.461Z</updated>
   <id>http://WigginsLi.github.io/</id>
   
   <author>
@@ -15,6 +15,60 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2020_01_12</title>
+    <link href="http://WigginsLi.github.io/2020/01/13/2020-01-12/"/>
+    <id>http://WigginsLi.github.io/2020/01/13/2020-01-12/</id>
+    <published>2020-01-12T22:35:32.000Z</published>
+    <updated>2020-01-12T15:02:05.461Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;套题&quot;&gt;&lt;a href=&quot;#套题&quot; class=&quot;headerlink&quot; title=&quot;套题&quot;&gt;&lt;/a&gt;套题&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;牛客练习赛57&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A - 简单模拟&lt;/li&gt;
+&lt;li&gt;B -
+        
+      
+    
+    </summary>
+    
+      <category term="每日小记" scheme="http://WigginsLi.github.io/categories/%E6%AF%8F%E6%97%A5%E5%B0%8F%E8%AE%B0/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>博弈论总结</title>
+    <link href="http://WigginsLi.github.io/2019/10/17/game-theory/"/>
+    <id>http://WigginsLi.github.io/2019/10/17/game-theory/</id>
+    <published>2019-10-16T21:18:26.000Z</published>
+    <updated>2019-10-17T13:25:19.744Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;巴什博弈&quot;&gt;&lt;a href=&quot;#巴什博弈&quot; class=&quot;headerlink&quot; title=&quot;巴什博弈&quot;&gt;&lt;/a&gt;巴什博弈&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;能取$ [1-k]  -&amp;gt; n\%(k+1) $&lt;/li&gt;
+&lt;li&gt;给定取数范围集合S -&amp;gt;
+        
+      
+    
+    </summary>
+    
+      <category term="技术" scheme="http://WigginsLi.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>技术部二面试题</title>
@@ -459,56 +513,6 @@
     
     
       <category term="dp" scheme="http://WigginsLi.github.io/tags/dp/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>USACO-Teleportation【模拟】</title>
-    <link href="http://WigginsLi.github.io/2019/03/16/rating-2-F/"/>
-    <id>http://WigginsLi.github.io/2019/03/16/rating-2-F/</id>
-    <published>2019-03-16T01:39:34.000Z</published>
-    <updated>2019-03-15T17:51:09.989Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;$\implies$ &lt;a href=&quot;http://codeforces.com/group/NVaJtLaLjS/contest/238204/problem/F&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;contest传送门&lt;/a&gt;&lt;br&gt;$\implies$ &lt;a href=&quot;http://www.usaco.org/index.php?page=viewproblem2&amp;amp;cpid=807&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;USACO传送门&lt;/a&gt;  &lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;水题一道，仅做记录&lt;/p&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-      <category term="Training" scheme="http://WigginsLi.github.io/categories/Training/"/>
-    
-      <category term="模拟" scheme="http://WigginsLi.github.io/categories/%E6%A8%A1%E6%8B%9F/"/>
-    
-    
-      <category term="模拟" scheme="http://WigginsLi.github.io/tags/%E6%A8%A1%E6%8B%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>USACO18FEB-Rest Stops【贪心】</title>
-    <link href="http://WigginsLi.github.io/2019/03/16/rating-2-C/"/>
-    <id>http://WigginsLi.github.io/2019/03/16/rating-2-C/</id>
-    <published>2019-03-16T00:28:36.000Z</published>
-    <updated>2019-03-15T17:25:25.389Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;$\implies$&lt;a href=&quot;http://codeforces.com/group/NVaJtLaLjS/contest/238204/problem/C&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;contest传送门&lt;/a&gt;&lt;br&gt;$\implies$&lt;a href=&quot;https://www.luogu.org/problemnew/show/P4266&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;洛谷传送门&lt;/a&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;场上没做出来的贪心题，关键是没读懂题意or2&lt;/p&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-      <category term="Training" scheme="http://WigginsLi.github.io/categories/Training/"/>
-    
-      <category term="贪心" scheme="http://WigginsLi.github.io/categories/%E8%B4%AA%E5%BF%83/"/>
-    
-    
-      <category term="贪心" scheme="http://WigginsLi.github.io/tags/%E8%B4%AA%E5%BF%83/"/>
     
   </entry>
   
