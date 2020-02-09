@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://WigginsLi.github.io/"/>
-  <updated>2020-01-12T15:02:05.461Z</updated>
+  <updated>2020-02-09T14:35:54.485Z</updated>
   <id>http://WigginsLi.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>MIT-ALgo-lecture</title>
+    <link href="http://WigginsLi.github.io/2020/02/10/MIT-ALgo-lecture/"/>
+    <id>http://WigginsLi.github.io/2020/02/10/MIT-ALgo-lecture/</id>
+    <published>2020-02-09T22:29:30.000Z</published>
+    <updated>2020-02-09T14:35:54.485Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;分享1-3集 &lt;strong&gt;MIT的算法公开课程&lt;/strong&gt;（ &lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="技术" scheme="http://WigginsLi.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>2020_01_12</title>
@@ -488,31 +513,6 @@
     
     
       <category term="思维" scheme="http://WigginsLi.github.io/tags/%E6%80%9D%E7%BB%B4/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>USACO18FEB-Snow Boots S【线性dp】</title>
-    <link href="http://WigginsLi.github.io/2019/03/16/rating-2-G/"/>
-    <id>http://WigginsLi.github.io/2019/03/16/rating-2-G/</id>
-    <published>2019-03-16T09:43:22.000Z</published>
-    <updated>2019-03-16T03:41:20.534Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;$\implies$&lt;a href=&quot;http://codeforces.com/group/NVaJtLaLjS/contest/238204/problem/G&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;contest传送门&lt;/a&gt;&lt;br&gt;$\implies$&lt;a href=&quot;https://www.luogu.org/problemnew/show/P4265&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;洛谷传送门&lt;/a&gt;  &lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;又是一道比较简单的dp，但是赛场上还是没出_(:з」∠)&lt;/p&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-      <category term="Training" scheme="http://WigginsLi.github.io/categories/Training/"/>
-    
-      <category term="动态规划" scheme="http://WigginsLi.github.io/categories/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
-    
-    
-      <category term="dp" scheme="http://WigginsLi.github.io/tags/dp/"/>
     
   </entry>
   
